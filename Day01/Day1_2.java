@@ -21,7 +21,7 @@ public class Day1_2 {
 
         int x = 0;
         int y = 0;
-        ArrayList<Line> array = new ArrayList<>();
+        List<Line> array = new ArrayList<>();
         Point origin = new Point(0, 0);
         Point lastPoint = origin;
         boolean found = false;
