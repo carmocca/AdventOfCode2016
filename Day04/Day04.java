@@ -1,3 +1,5 @@
+package Day04;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.nio.file.Paths;
@@ -6,14 +8,14 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
-public class Day4 { 
+public class Day04 {
 
     static PriorityQueue <CharTuple> pq = new PriorityQueue <CharTuple>();
 
     public static void main (String[] args) {
         String input = null;
         try {
-            input = new String(Files.readAllBytes(Paths.get("input.txt")));
+            input = new String(Files.readAllBytes(Paths.get("Day04/input.txt")));
         } catch (IOException e) {
             System.out.println("Error reading file");
             System.exit(0);

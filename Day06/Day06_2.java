@@ -1,3 +1,5 @@
+package Day06;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
@@ -6,14 +8,14 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Day6_2 {
+public class Day06_2 {
 
     public static List<Map<Character, Integer>> log = new ArrayList<Map<Character, Integer>>();
 
     public static void main (String[] args) {
         Scanner sc = null;
         try {
-            sc = new Scanner(new File("input.txt"));
+            sc = new Scanner(new File("Day06/input.txt"));
         } catch (IOException e) {
             System.out.println("Error reading file");
             System.exit(0);

@@ -1,3 +1,5 @@
+package Day09;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.nio.file.Paths;
@@ -5,13 +7,13 @@ import java.nio.file.Files;
 import java.io.IOException;
 import java.lang.StringBuilder;
 
-public class Day9 {
+public class Day09 {
 
     public static void main(String[] args) {
 
         StringBuilder input = null;
         try {
-            input = new StringBuilder(new String(Files.readAllBytes(Paths.get("input.txt"))));
+            input = new StringBuilder(new String(Files.readAllBytes(Paths.get("Day09/input.txt"))));
         } catch (IOException e) {
             System.out.println("Error reading file");
             System.exit(0);

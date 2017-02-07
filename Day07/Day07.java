@@ -1,16 +1,18 @@
+package Day07;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day7_2 {
+public class Day07 {
     
     public static void main (String [] args ) {
         
         Scanner sc = null;
         try {
-            sc = new Scanner(new File("input.txt"));
+            sc = new Scanner(new File("Day07/input.txt"));
         } catch (IOException e) {
             System.out.println("Error reading file");
         }
@@ -30,7 +32,7 @@ public class Day7_2 {
                 input = input.replace("[" + matcher.group(1) + "]", " ");
             
             }
-            if (supportsSSL(input, bracketedText)) {
+            if (hasABBA(input) && !hasABBA(bracketedText)) {
                 res++;
             }
         }
@@ -39,25 +41,11 @@ public class Day7_2 {
         sc.close();
     }
 
-    public static boolean supportsSSL(String aba, String bab) {
-        String check = "(\\w)(\\w)\\1";
+    public static boolean hasABBA(String s) {
+        String check = "(\\w)(\\w)\\2\\1";
         Pattern pattern = Pattern.compile(check);
-        Matcher matcher = pattern.matcher(aba);
-        boolean found = matcher.find();
-
-        while (found) {
-            String a = matcher.group(1), b = matcher.group(2);
-            if (!a.equals(b)) {
-                check = b + a + b;
-                pattern = Pattern.compile(check);
-                Matcher matcher2 = pattern.matcher(bab);
-                if (matcher2.find()) {
-                    return true;
-                }
-            }
-            // Needed for overlapping
-            found = matcher.find(matcher.start() + 1);
-        }
-        return false;
+        Matcher matcher = pattern.matcher(s);
+        return (matcher.find()) ? (!matcher.group(1).equals(matcher.group(2))) : false;
     }
+
 }

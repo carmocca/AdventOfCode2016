@@ -1,15 +1,17 @@
+package Day04;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.io.IOException;
 
-public class Day4_2 { 
+public class Day04_2 {
 
     public static void main (String[] args) {
         String input = null;
         try {
-            input = new String(Files.readAllBytes(Paths.get("input.txt")));
+            input = new String(Files.readAllBytes(Paths.get("Day04/input.txt")));
         } catch (IOException e) {
             System.out.println("Error reading file");
             System.exit(0);

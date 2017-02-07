@@ -1,3 +1,5 @@
+package Day01;
+
 /*	REQUIRES STRAIGHT LINES (no slope)
 */
 public class Line {

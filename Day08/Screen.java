@@ -1,3 +1,5 @@
+package Day08;
+
 import java.util.Scanner;
 
 public class Screen {

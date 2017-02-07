@@ -1,16 +1,16 @@
+package Day01;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Day1_2 {
+public class Day01 {
     public static void main (String[] args) {
         String input = null;
         try {
-            input = new String(Files.readAllBytes(Paths.get("input.txt")));
+            input = new String(Files.readAllBytes(Paths.get("Day01/input.txt")));
         } catch (IOException e) {
             System.out.println("Error reading file");
             System.exit(0);
@@ -21,14 +21,10 @@ public class Day1_2 {
 
         int x = 0;
         int y = 0;
-        List<Line> array = new ArrayList<>();
-        Point origin = new Point(0, 0);
-        Point lastPoint = origin;
-        boolean found = false;
-
         String lastDirection = "U";
-        while (matcher.find() && !found) {
-            String newDirection = matcher.group(1);
+        String newDirection;
+        while (matcher.find()) {
+            newDirection = matcher.group(1);
             int distance = Integer.parseInt(matcher.group(2));
             switch (lastDirection){
                 case "R":   if (newDirection.equals("R")) {
@@ -66,19 +62,11 @@ public class Day1_2 {
                 default:    System.out.println("Error reading file");
                             break;      
             }
-
-            Line line = new Line(lastPoint, new Point(x, y));
-            for (Line l : array) {
-                Point aux = line.intersects(l);
-                if (aux != null) {
-                    found = true;   
-                    System.out.println("Shortest path to the destination: " + aux.distanceTo(origin));  
-                    break;
-                }
-            }
-
-            lastPoint = new Point(x, y);
-            array.add(line);
         }
+        System.out.println("Shortest path to the destination: " + distance(x, 0, y, 0));
+    }
+
+    public static int distance(int x1, int x0, int y1, int y0){
+        return Math.abs(x1 - x0) + Math.abs(y1 - y0);
     }
 }

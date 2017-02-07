@@ -1,8 +1,10 @@
+package Day08;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
-public class Day8 {
+public class Day08 {
 
     public static Screen screen = new Screen(50, 6);
 
@@ -10,7 +12,7 @@ public class Day8 {
 
         Scanner sc = null;
         try {
-            sc = new Scanner(new File("input.txt"));
+            sc = new Scanner(new File("Day08/input.txt"));
         } catch (IOException e) {
             System.out.println("Error reading file");
         }

@@ -1,9 +1,11 @@
+package Day05;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.io.UnsupportedEncodingException;
 import java.lang.StringBuilder;
 
-public class Day5_2 {
+public class Day05_2 {
     
     public static void main (String[] args) {
         

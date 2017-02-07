@@ -1,3 +1,5 @@
+package Day02;
+
 public class Keypad {
     private int ypos, xpos;
 

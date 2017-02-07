@@ -1,3 +1,5 @@
+package Day04;
+
 public class CharTuple implements Comparable<CharTuple> {
     
     private char c;
