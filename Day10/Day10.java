@@ -49,7 +49,7 @@ public class Day10 {
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(input);
 
-        // Process the instructions, in this part we can ignore the output bins
+        // Process the instructions
         while (matcher.find()) {
             int id1 = Integer.parseInt(matcher.group(1));
             int id2 = Integer.parseInt(matcher.group(3));
