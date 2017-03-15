@@ -1,16 +1,16 @@
 package Day05;
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.io.UnsupportedEncodingException;
 
 public class Day05 {
-    
-    public static void main (String[] args) {
-        
+
+    public static void main(String[] args) {
+
         String input = "ugkcyxxp";
         String res = "";
-        
+
         int j = 0;
         while (res.length() < 8) {
             String md5 = getMD5(input + j);
@@ -26,7 +26,7 @@ public class Day05 {
     /*  From https://www.mkyong.com/java/java-md5-hashing-example/
     */
     public static String getMD5(String s) {
-        
+
         byte[] hashedBytes = null;
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");

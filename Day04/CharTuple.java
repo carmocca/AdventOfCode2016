@@ -1,7 +1,7 @@
 package Day04;
 
 public class CharTuple implements Comparable<CharTuple> {
-    
+
     private char c;
     private int appearances;
 
@@ -10,7 +10,7 @@ public class CharTuple implements Comparable<CharTuple> {
         this.appearances = appearances;
     }
 
-    public char getChar(){
+    public char getChar() {
         return c;
     }
 

@@ -82,8 +82,8 @@ public class Day10 {
         System.out.println(outputArray[0] * outputArray[1] * outputArray[2]);
     }
 
-    public static void findResponsible(){
-        for (int i = 0; i < botArray.length ; i++) {
+    public static void findResponsible() {
+        for (int i = 0; i < botArray.length; i++) {
             if (botArray[i] != null) {
                 if (botArray[i].isResponsible(61, 17)) {
                     System.out.println("Responsible " + botArray[i].toString());

@@ -1,18 +1,14 @@
 package Day06;
 
-import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Day06 {
 
     public static List<Map<Character, Integer>> log = new ArrayList<Map<Character, Integer>>();
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Scanner sc = null;
         try {
             sc = new Scanner(new File("Day06/input.txt"));
@@ -27,7 +23,7 @@ public class Day06 {
         }
 
         // Process the input
-        while(sc.hasNext()) {
+        while (sc.hasNext()) {
             String input = sc.nextLine();
             for (int i = 0; i < input.length(); i++) {
                 Integer num = log.get(i).get(input.charAt(i));

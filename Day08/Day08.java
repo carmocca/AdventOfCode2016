@@ -1,14 +1,14 @@
 package Day08;
 
-import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Day08 {
 
     public static Screen screen = new Screen(50, 6);
 
-    public static void main (String [] args) {
+    public static void main(String[] args) {
 
         Scanner sc = null;
         try {
@@ -21,7 +21,7 @@ public class Day08 {
             String input = sc.nextLine();
             screen.processInstruction(input);
         }
-        
+
         System.out.println(screen.toString());
         System.out.println(screen.getOnPixels() + " pixels are lit");
     }
