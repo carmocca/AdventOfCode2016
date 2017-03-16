@@ -1,5 +1,3 @@
-package Day01;
-
 /*	REQUIRES STRAIGHT POINTS
 *
 */
@@ -60,9 +58,6 @@ public class Point {
         if (this.x != point.getX()) {
             return false;
         }
-        if (this.y != point.getY()) {
-            return false;
-        }
-        return true;
+        return this.y == point.getY();
     }
 }

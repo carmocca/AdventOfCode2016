@@ -1,5 +1,3 @@
-package Day04;
-
 public class CharTuple implements Comparable<CharTuple> {
 
     private char c;
@@ -32,10 +30,7 @@ public class CharTuple implements Comparable<CharTuple> {
             return false;
         }
         CharTuple c = (CharTuple) o;
-        if (this.c == c.getChar()) {
-            return true;
-        }
-        return false;
+        return this.c == c.getChar();
     }
 
     @Override
@@ -53,7 +48,7 @@ public class CharTuple implements Comparable<CharTuple> {
         } else if (thisNum > num) {
             return -1;
         } else { //Order alphabetically
-            Character ch = new Character(this.getChar());
+            Character ch = this.getChar();
             return ch.compareTo(o.getChar());
         }
     }

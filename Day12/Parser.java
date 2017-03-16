@@ -1,5 +1,3 @@
-package Day12;
-
 public class Parser {
     private int[] registers;
 

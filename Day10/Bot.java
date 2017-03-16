@@ -1,5 +1,3 @@
-package Day10;
-
 public class Bot {
     private int id;
     private int[] chips;

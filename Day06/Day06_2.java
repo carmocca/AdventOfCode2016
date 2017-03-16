@@ -1,12 +1,10 @@
-package Day06;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
 public class Day06_2 {
 
-    public static List<Map<Character, Integer>> log = new ArrayList<Map<Character, Integer>>();
+    public static List<Map<Character, Integer>> log = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner sc = null;
@@ -19,7 +17,7 @@ public class Day06_2 {
 
         // Create maps
         for (int i = 0; i < 8; i++) {
-            log.add(new HashMap<Character, Integer>());
+            log.add(new HashMap<>());
         }
 
         // Process the input

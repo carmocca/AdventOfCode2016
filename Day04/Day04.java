@@ -1,5 +1,3 @@
-package Day04;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Day04 {
 
-    static PriorityQueue<CharTuple> pq = new PriorityQueue<CharTuple>();
+    static PriorityQueue<CharTuple> pq = new PriorityQueue<>();
 
     public static void main(String[] args) {
         String input = null;
@@ -21,7 +19,7 @@ public class Day04 {
             System.exit(0);
         }
 
-        String regex = "([\\w-]+)-(\\d+)\\[(\\w+)\\]";
+        String regex = "([\\w-]+)-(\\d+)\\[(\\w+)]";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
 
@@ -43,7 +41,7 @@ public class Day04 {
     public static void countLetters(String s) {
         s = s.replace("-", "");
         // Map that contains each char with its number of appearances
-        HashMap<Character, Integer> appearances = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> appearances = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             Integer num = appearances.get(c);

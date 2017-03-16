@@ -1,5 +1,3 @@
-package Day10;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -83,10 +81,10 @@ public class Day10 {
     }
 
     public static void findResponsible() {
-        for (int i = 0; i < botArray.length; i++) {
-            if (botArray[i] != null) {
-                if (botArray[i].isResponsible(61, 17)) {
-                    System.out.println("Responsible " + botArray[i].toString());
+        for (Bot bot : botArray) {
+            if (bot != null) {
+                if (bot.isResponsible(61, 17)) {
+                    System.out.println("Responsible " + bot.toString());
                 }
             } else {
                 break;

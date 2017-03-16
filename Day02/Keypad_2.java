@@ -1,5 +1,3 @@
-package Day02;
-
 public class Keypad_2 {
     private char[][] keypad;
     private int ypos, xpos;

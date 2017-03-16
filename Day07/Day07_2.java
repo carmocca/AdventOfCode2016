@@ -1,5 +1,3 @@
-package Day07;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -17,7 +15,7 @@ public class Day07_2 {
             System.out.println("Error reading file");
         }
 
-        String regex = "\\[(\\w+)\\]";
+        String regex = "\\[(\\w+)]";
         int res = 0;
 
         while (sc.hasNext()) {

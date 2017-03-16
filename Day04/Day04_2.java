@@ -1,5 +1,3 @@
-package Day04;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -17,11 +15,11 @@ public class Day04_2 {
             System.exit(0);
         }
 
-        String regex = "([\\w-]+)-(\\d+)\\[(\\w+)\\]";
+        String regex = "([\\w-]+)-(\\d+)\\[(\\w+)]";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
 
-        String roomName = "";
+        String roomName;
         while (matcher.find()) {
             roomName = shiftDecipher(matcher.group(1), Integer.parseInt(matcher.group(2)));
             if (roomName.contains("north") || roomName.contains("pole")) {

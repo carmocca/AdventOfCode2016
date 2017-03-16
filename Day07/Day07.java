@@ -1,5 +1,3 @@
-package Day07;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -17,7 +15,7 @@ public class Day07 {
             System.out.println("Error reading file");
         }
 
-        String regex = "\\[(\\w+)\\]";
+        String regex = "\\[(\\w+)]";
         int res = 0;
 
         while (sc.hasNext()) {
@@ -45,7 +43,7 @@ public class Day07 {
         String check = "(\\w)(\\w)\\2\\1";
         Pattern pattern = Pattern.compile(check);
         Matcher matcher = pattern.matcher(s);
-        return (matcher.find()) ? (!matcher.group(1).equals(matcher.group(2))) : false;
+        return (matcher.find()) && (!matcher.group(1).equals(matcher.group(2)));
     }
 
 }

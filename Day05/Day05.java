@@ -1,5 +1,3 @@
-package Day05;
-
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -35,9 +33,9 @@ public class Day05 {
             System.out.println("Exception in function getMD5");
         }
 
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < hashedBytes.length; i++) {
-            sb.append(Integer.toString((hashedBytes[i] & 0xff) + 0x100, 16)
+        StringBuilder sb = new StringBuilder();
+        for (byte hashedByte : hashedBytes) {
+            sb.append(Integer.toString((hashedByte & 0xff) + 0x100, 16)
                     .substring(1));
         }
         return sb.toString();
